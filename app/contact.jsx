@@ -10,12 +10,13 @@ export default function Contact() {
         We'd love to hear your feedback and suggestions!
       </Text>
 
-      <Text style={styles.info}>📧 Email: footballquiz@gmail.com</Text>
+      <Text style={styles.info}>📧 Email: samuelamankwah157@gmail.com</Text>
       <Text style={styles.info}>📱 Phone: +233 20 123 4567</Text>
       <Text style={styles.info}>🌍 Location: Accra, Ghana</Text>
 
       <Text style={styles.footer}>
         Thank you for using Football Quiz App ⚽
+        this is my very frist app
       </Text>
 
       <Link href="/">
