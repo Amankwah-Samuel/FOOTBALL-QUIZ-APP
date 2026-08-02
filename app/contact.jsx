@@ -18,7 +18,7 @@ export default function Contact() {
       </View>
 
       <Text style={styles.footer}>
-        ⚽ Thank you for using Football Quiz App!
+        ⚽ Thank you for using Football Quiz App and many more!
       </Text>
 
       <Text style={styles.note}>
