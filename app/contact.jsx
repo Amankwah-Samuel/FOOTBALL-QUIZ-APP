@@ -13,7 +13,7 @@ export default function Contact() {
 
       <View style={styles.card}>
         <Text style={styles.info}>📧 Email: samuelamankwah157@gmail.com</Text>
-        <Text style={styles.info}>📱 Phone: +233 20 123 4567</Text>
+        <Text style={styles.info}>📱 Phone: 0597880189</Text>
         <Text style={styles.info}>📍 Location: Takoradi, Accra, Ghana</Text>
       </View>
 

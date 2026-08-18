@@ -9,7 +9,7 @@ export default function About() {
 
   return (
     <View style={[styles.container, {backgroundColor:theme.primary}]}>
-      <Text style={styles.title}>About Football Quiz App ⚽</Text>
+      <Text style={styles.title}>About Football and soccer Quiz App ⚽</Text>
 
       <Text style={styles.text}>
         Welcome to the Football Quiz App! Test your football knowledge with fun
