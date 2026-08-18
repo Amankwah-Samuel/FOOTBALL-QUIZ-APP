@@ -1,15 +1,22 @@
 import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const STATS = [
+interface Stat {
+  value: string;
+  label: string;
+}
+
+const STATS: Stat[] = [
   { value: "10k+", label: "Players" },
   { value: "50k+", label: "Quizzes Taken" },
   { value: "100+", label: "Categories" },
 ];
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <LinearGradient
       colors={["#020806", "#04140d", "#0e3324", "#04140d", "#020806"]}
@@ -21,9 +28,15 @@ export default function Home() {
           contentContainerStyle={styles.container}
           showsVerticalScrollIndicator={false}
         >
-          <View style={styles.liveBadge}>
-            <View style={styles.liveDot} />
-            <Text style={styles.liveBadgeText}>LIVE GLOBAL LEADERBOARD ACTIVE</Text>
+          <View style={styles.headerRow}>
+            <View style={styles.liveBadge}>
+              <View style={styles.liveDot} />
+              <Text style={styles.liveBadgeText}>LIVE GLOBAL LEADERBOARD ACTIVE</Text>
+            </View>
+
+            <Link href="/login" style={styles.loginLink}>
+              Login
+            </Link>
           </View>
 
           <Text style={styles.title}>
@@ -37,7 +50,11 @@ export default function Home() {
             football legend.
           </Text>
 
-          <TouchableOpacity style={styles.primaryButton} activeOpacity={0.85}>
+          <TouchableOpacity
+            style={styles.primaryButton}
+            activeOpacity={0.85}
+            onPress={() => router.push("/register")}
+          >
             <Text style={styles.primaryButtonText}>▶  Start Quiz</Text>
           </TouchableOpacity>
 
@@ -60,12 +77,8 @@ export default function Home() {
           </View>
 
           <View style={styles.linksRow}>
-            <Link href="/about" style={styles.footerLink}>
+            <Link href="/quiz" style={styles.footerLink}>
               About
-            </Link>
-            <Text style={styles.footerDot}>•</Text>
-            <Link href="/contact" style={styles.footerLink}>
-              Contact
             </Link>
           </View>
         </ScrollView>
@@ -74,7 +87,7 @@ export default function Home() {
   );
 }
 
-const GREEN = "#22c55e";
+const BLUE = "#38bdf8";
 
 const styles = StyleSheet.create({
   background: {
@@ -89,21 +102,37 @@ const styles = StyleSheet.create({
     paddingTop: 12,
     paddingBottom: 36,
   },
+  headerRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: 20,
+  },
   liveBadge: {
     flexDirection: "row",
     alignItems: "center",
     alignSelf: "flex-start",
-    marginBottom: 20,
+  },
+  loginLink: {
+    color: BLUE,
+    fontSize: 13,
+    fontWeight: "700",
+    borderWidth: 1,
+    borderColor: "rgba(56, 189, 248, 0.4)",
+    borderRadius: 20,
+    paddingVertical: 6,
+    paddingHorizontal: 14,
+    overflow: "hidden",
   },
   liveDot: {
     width: 7,
     height: 7,
     borderRadius: 4,
-    backgroundColor: GREEN,
+    backgroundColor: BLUE,
     marginRight: 8,
   },
   liveBadgeText: {
-    color: GREEN,
+    color: BLUE,
     fontSize: 11,
     fontWeight: "700",
     letterSpacing: 0.8,
@@ -116,7 +145,7 @@ const styles = StyleSheet.create({
     marginBottom: 14,
   },
   titleAccent: {
-    color: GREEN,
+    color: BLUE,
   },
   subtitle: {
     fontSize: 15,
@@ -125,7 +154,7 @@ const styles = StyleSheet.create({
     marginBottom: 28,
   },
   primaryButton: {
-    backgroundColor: GREEN,
+    backgroundColor: BLUE,
     paddingVertical: 16,
     borderRadius: 14,
     alignItems: "center",
@@ -195,9 +224,5 @@ const styles = StyleSheet.create({
     color: "#38bdf8",
     fontSize: 14,
     fontWeight: "600",
-  },
-  footerDot: {
-    color: "#475569",
-    marginHorizontal: 10,
   },
 });

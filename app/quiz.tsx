@@ -1,14 +1,13 @@
 import { View, Text, StyleSheet, useColorScheme } from "react-native";
 import { Link } from "expo-router";
-import Colors from '../constants/colors'
+import Colors from "../constants/colors";
 
-export default function About() {
-
-   const colorScheme = useColorScheme()
-    const theme = Colors[colorScheme] ?? Colors.light
+export default function Quiz() {
+  const colorScheme = useColorScheme();
+  const theme = Colors[colorScheme ?? "light"] ?? Colors.light;
 
   return (
-    <View style={[styles.container, {backgroundColor:theme.primary}]}>
+    <View style={[styles.container, { backgroundColor: theme.primary }]}>
       <Text style={styles.title}>About Football and soccer Quiz App ⚽</Text>
 
       <Text style={styles.text}>

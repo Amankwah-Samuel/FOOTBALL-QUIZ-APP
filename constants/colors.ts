@@ -1,4 +1,16 @@
-const Colors = {
+export type ColorScheme = "light" | "dark";
+
+export interface ThemeColors {
+  background: string;
+  card: string;
+  primary: string;
+  secondary: string;
+  text: string;
+  textSecondary: string;
+  border: string;
+}
+
+const Colors: Record<ColorScheme, ThemeColors> = {
   light: {
     background: "#F8FAFC",
     card: "#FFFFFF",
