@@ -50,8 +50,7 @@ export default function Register() {
             <Text style={styles.emoji}>⚽</Text>
             <Text style={styles.title}>Create Your Account</Text>
             <Text style={styles.subtitle}>
-              Join the leaderboard and track your progress as you climb the
-              ranks.
+              Join the leaderboard and track your rank globally 
             </Text>
 
             {!!error && <Text style={styles.errorText}>{error}</Text>}
