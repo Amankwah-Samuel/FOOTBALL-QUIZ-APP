@@ -73,10 +73,7 @@ export default function About() {
             having fun — no matter your level.
           </Text>
 
-          <Text style={styles.footer}>
-            Made with ❤️ using Expo & React Native
-          </Text>
-
+          
           <Link href="/" style={styles.backLink}>
             Back home
           </Link>

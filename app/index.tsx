@@ -1,4 +1,10 @@
-import { View, Text, TouchableOpacity, StyleSheet, ScrollView } from "react-native";
+import {
+  View,
+  Text,
+  TouchableOpacity,
+  StyleSheet,
+  ScrollView,
+} from "react-native";
 import { Link, useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -31,7 +37,6 @@ export default function Home() {
           <View style={styles.headerRow}>
             <View style={styles.liveBadge}>
               <View style={styles.liveDot} />
-              <Text style={styles.liveBadgeText}>LIVE GLOBAL LEADERBOARD ACTIVE</Text>
             </View>
 
             <Link href="/login" style={styles.loginLink}>
@@ -45,9 +50,9 @@ export default function Home() {
           </Text>
 
           <Text style={styles.subtitle}>
-            Test your football knowledge. Challenge yourself across diverse
-            eras and leagues. Rise through the ranks and become a global
-            football legend.
+            Test your football knowledge. Challenge yourself across diverse eras
+            and leagues. Rise through the ranks and become a global football
+            legend.
           </Text>
 
           <TouchableOpacity
@@ -55,10 +60,8 @@ export default function Home() {
             activeOpacity={0.85}
             onPress={() => router.push("/register")}
           >
-            <Text style={styles.primaryButtonText}>▶  Start Quiz</Text>
+            <Text style={styles.primaryButtonText}>▶ Start Quiz</Text>
           </TouchableOpacity>
-
-         
 
           <View style={styles.statsRow}>
             {STATS.map((stat) => (
@@ -71,7 +74,9 @@ export default function Home() {
 
           <View style={styles.heroCard}>
             <Text style={styles.heroEmoji}>⚽</Text>
-            <Text style={styles.heroCardCaption}>Rise. Compete. Become a legend.</Text>
+            <Text style={styles.heroCardCaption}>
+              Rise. Compete. Become a legend.
+            </Text>
           </View>
 
           <View style={styles.linksRow}>
