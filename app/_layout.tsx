@@ -20,6 +20,10 @@ const RootLayout = () => {
         <Stack.Screen name="quiz" options={{ title: "Quiz page" }} />
         <Stack.Screen name="login" options={{ title: "Login" }} />
         <Stack.Screen name="register" options={{ title: "Create Account" }} />
+        <Stack.Screen
+          name="categories"
+          options={{ title: "Select Your Arena", headerShown: false }}
+        />
       </Stack>
     </>
   );

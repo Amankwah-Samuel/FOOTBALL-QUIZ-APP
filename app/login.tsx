@@ -28,7 +28,7 @@ export default function Login() {
     }
     setError("");
     // TODO: wire up to real authentication once a backend exists.
-    router.replace("/");
+    router.replace("/categories");
   };
 
   return (
@@ -90,7 +90,7 @@ export default function Login() {
               </Link>
             </View>
 
-            <Link href="/" style={styles.guestLink}>
+            <Link href="/categories" style={styles.guestLink}>
               Continue as guest
             </Link>
           </ScrollView>

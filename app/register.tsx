@@ -29,7 +29,7 @@ export default function Register() {
     }
     setError("");
     // TODO: wire up to real account creation once a backend exists.
-    router.replace("/");
+    router.replace("/categories");
   };
 
   return (
