@@ -58,9 +58,7 @@ export default function Home() {
             <Text style={styles.primaryButtonText}>▶  Start Quiz</Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.secondaryButton} activeOpacity={0.7}>
-            <Text style={styles.secondaryButtonText}>⊙  Explore Categories</Text>
-          </TouchableOpacity>
+         
 
           <View style={styles.statsRow}>
             {STATS.map((stat) => (
@@ -77,7 +75,7 @@ export default function Home() {
           </View>
 
           <View style={styles.linksRow}>
-            <Link href="/quiz" style={styles.footerLink}>
+            <Link href="/about" style={styles.footerLink}>
               About
             </Link>
           </View>
