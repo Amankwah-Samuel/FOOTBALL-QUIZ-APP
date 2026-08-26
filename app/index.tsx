@@ -14,12 +14,6 @@ interface Stat {
   label: string;
 }
 
-const STATS: Stat[] = [
-  { value: "10k+", label: "Players" },
-  { value: "50k+", label: "Quizzes Taken" },
-  { value: "100+", label: "Categories" },
-];
-
 export default function Home() {
   const router = useRouter();
 
@@ -63,26 +57,15 @@ export default function Home() {
             <Text style={styles.primaryButtonText}>▶ Start Quiz</Text>
           </TouchableOpacity>
 
-          <View style={styles.statsRow}>
-            {STATS.map((stat) => (
-              <View key={stat.label} style={styles.statItem}>
-                <Text style={styles.statValue}>{stat.value}</Text>
-                <Text style={styles.statLabel}>{stat.label}</Text>
-              </View>
-            ))}
-          </View>
+          <Link href="/about" style={styles.aboutButton}>
+            ℹ️ About the App
+          </Link>
 
           <View style={styles.heroCard}>
             <Text style={styles.heroEmoji}>⚽</Text>
             <Text style={styles.heroCardCaption}>
               Rise. Compete. Become a legend.
             </Text>
-          </View>
-
-          <View style={styles.linksRow}>
-            <Link href="/about" style={styles.footerLink}>
-              About
-            </Link>
           </View>
         </ScrollView>
       </SafeAreaView>
@@ -168,18 +151,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: "800",
   },
-  secondaryButton: {
+  aboutButton: {
     borderWidth: 1,
     borderColor: "rgba(148, 163, 184, 0.35)",
-    paddingVertical: 16,
-    borderRadius: 14,
-    alignItems: "center",
-    marginBottom: 32,
-  },
-  secondaryButtonText: {
     color: "#e2e8f0",
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: "700",
+    textAlign: "center",
+    paddingVertical: 14,
+    borderRadius: 14,
+    marginBottom: 28,
+    overflow: "hidden",
   },
   statsRow: {
     flexDirection: "row",
@@ -216,16 +198,6 @@ const styles = StyleSheet.create({
   heroCardCaption: {
     color: "#94a3b8",
     fontSize: 13,
-    fontWeight: "600",
-  },
-  linksRow: {
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  footerLink: {
-    color: "#38bdf8",
-    fontSize: 14,
     fontWeight: "600",
   },
 });
