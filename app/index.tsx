@@ -58,7 +58,7 @@ export default function Home() {
           </TouchableOpacity>
 
           <Link href="/about" style={styles.aboutButton}>
-            ℹ️ About the App
+            ℹ️ About the App and what it entails 
           </Link>
 
           <View style={styles.heroCard}>
