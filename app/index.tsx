@@ -62,7 +62,7 @@ export default function Home() {
           </Link>
 
           <View style={styles.heroCard}>
-            <Text style={styles.heroEmoji}>⚽</Text>
+            <Text style={styles.heroEmoji}></Text>
             <Text style={styles.heroCardCaption}>
               Rise. Compete. Become a legend.
             </Text>
